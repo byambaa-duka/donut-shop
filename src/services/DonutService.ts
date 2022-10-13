@@ -10,7 +10,7 @@ export const getDonuts = (): Promise<DonutResponse> => {
     });
 };
 
-export const getDonutById = (id: number): Promise<SingleDonut> => {
+export const getDonutById = (id: string | undefined): Promise<SingleDonut> => {
   return axios
     .get("https://grandcircusco.github.io/demo-apis/donuts/" + id + ".json")
     .then((response) => {
